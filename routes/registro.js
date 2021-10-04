@@ -4,7 +4,7 @@ module.exports = (app)=>{
     })
 
     app.post('/registro',(req,res)=>{
-        var conexao = require('../cofing/database')()
+        var conexao = require('../config/database')()
         var usuarios = require('../models/usuarios')
 
         usuarios.findOne({email:req.body.email})
