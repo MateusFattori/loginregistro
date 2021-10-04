@@ -5,4 +5,5 @@ var modelo = new mongoose.Schema({
     email:String,
     senha:String
 })
+
 module.exports = mongoose.model('usuarios',modelo)

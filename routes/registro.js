@@ -3,13 +3,20 @@ module.exports = (app)=>{
         res.render('registro.ejs')
     })
 
-    app.post('/registro',(req,res)=>{
+    app.post('/registro',async(req,res)=>{
         var conexao = require('../config/database')()
         var usuarios = require('../models/usuarios')
 
-        usuarios.findOne({email:req.body.email})
-        if(!usuarios){
-            res.send("esse email não está cadastrado")
+        var usereexiste = await usuarios.findOne({email:req.body.email})
+        if(usereexiste){
+            return res.send('Email já cadastrado')
+        }else{
+            var documento = new usuarios({
+                nome:req.body.nome,
+                email:req.body.email,
+                senha:req.body.senha
+            }).save()
+            res.render('login.ejs')
         }
     })
 }
