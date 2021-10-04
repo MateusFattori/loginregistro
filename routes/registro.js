@@ -8,7 +8,7 @@ module.exports = (app)=>{
         var usuarios = require('../models/usuarios')
 
         usuarios.findOne({email:req.body.email})
-        if(!usuario){
+        if(!usuarios){
             res.send("esse email não está cadastrado")
         }
     })
