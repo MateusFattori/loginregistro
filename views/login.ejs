@@ -14,5 +14,9 @@
     <input type="submit" value="Entrar">
     </form>
     <a href="/registro">Não possui registro?</a>
+
+    <% if(typeof(mensagem) != 'undefined'){%>
+        <h4><%=mensagem%></h4>
+    <% } %>
 </body>
 </html>
