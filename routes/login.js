@@ -10,6 +10,7 @@ module.exports = (app)=>{
         var usuarios = require('../models/usuarios')
 
         var userexiste = await usuarios.findOne({email:req.body.email})
+        conexao()
         if(userexiste){
             var bcrypt = require('bcrypt')
             var verificar = await bcrypt.compare(req.body.senha,userexiste.senha)
@@ -18,7 +19,7 @@ module.exports = (app)=>{
             }else{
                 res.render('login.ejs',{mensagem:'Senha não confere'})
             }
-        }else{
+            }else{
             res.render('login.ejs',{mensagem:'Email não cadastrado'})
         }
     })
