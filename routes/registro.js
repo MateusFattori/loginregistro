@@ -21,7 +21,7 @@ module.exports = (app)=>{
                 email:req.body.email,
                 senha:senhasegura
             }).save()
-            res.redirect('login.ejs')
+            res.redirect('/login')
         }
     })
 }
