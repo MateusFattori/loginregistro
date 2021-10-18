@@ -1,6 +1,6 @@
 module.exports = (app)=>{
     //Importar o bcrypt
-    var bcrypt = require('bcrypt')
+    var bcrypt = require('bcryptjs')
 
     app.get('/registro',(req,res)=>{
         res.render('registro.ejs')
