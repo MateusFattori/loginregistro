@@ -10,8 +10,8 @@ module.exports = (app)=>{
         var conexao = require('../config/database')()
         var usuarios = require('../models/usuarios')
 
-        var usereexiste = await usuarios.findOne({email:req.body.email})
-        if(usereexiste){
+        var userexiste = await usuarios.findOne({email:req.body.email})
+        if(userexiste){
             //return res.send('Email já cadastrado')
             return res.render('registro.ejs',{mensagem:'Email já Cadastrado'})
         }else{
