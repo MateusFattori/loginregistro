@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+</head>
+<body>
+    <h1>Dashboard - atividades</h1>
+    <h2><%=login.nome%></h2>
+    <h3>Cadastrar Atividades</h3>
+    <form action="" method="POST">
+        <input type="hidden" name="id" value="<%=login._id%>">
+        <input type="date" name="data" id="data"><br>
+        <select name="tipo" id="tipo">
+            <option value="AC">AC</option>
+            <option value="AT">AT</option>
+        </select><br>
+        <input type="text" name="entrega" id="entrega" placeholder="EX: Tarafas no Teams, chat, Email, Froms, etc"><br>
+        <input type="text" name="disiciplina" id="disiciplina" placeholder="EX: INW, BD2, LP2, HeG, BIO, etc"><br>
+        <textarea name="istrucoes" id="istrucoes" cols="30" rows="10" placeholder="Instruções"></textarea><br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
