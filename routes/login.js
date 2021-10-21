@@ -1,4 +1,4 @@
-const conexao = require("../config/database")
+const { render } =require('ejs')
 
 module.exports = (app)=>{
     app.get('/login',(req,res)=>{
@@ -15,7 +15,7 @@ module.exports = (app)=>{
             var verificar = await bcrypt.compare(req.body.senha,userexiste.senha)
             if(verificar){
                 //res.send('Usúario e senha correta')
-                res.redirect('/dashboard?id='+userexiste_id)
+                res.redirect('/dashboard?id='+userexiste)
             }else{
                 res.render('login.ejs',{mensagem:'Senha não confere'})
             }
