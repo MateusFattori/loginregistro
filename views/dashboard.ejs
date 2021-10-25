@@ -19,10 +19,10 @@
         </select><br>
         <input type="text" name="entrega" id="entrega" placeholder="Ex: Tarafas no Teams, chat, Email, Froms, etc"><br>
         <input type="text" name="disciplina" id="disciplina" placeholder="Ex: INW, BD2, LP2, HeG, BIO, etc"><br>
-        <textarea name="istrucoes" id="istrucoes" cols="30" rows="10" placeholder="Instruções"></textarea><br>
+        <textarea name="instrucoes" id="instrucoes" cols="30" rows="10" placeholder="Instruções"></textarea><br>
         <input type="submit" value="Salvar">
     </form>
-    <table>
+    <table border="3" >
         <tr>
             <th>Data</th>
             <th>Tipo</th>
@@ -30,8 +30,9 @@
             <th>Disciplina</th>
             <th>Instruções</th>
         </tr>
+        </% for (var n = 0; n <lista.length; n++) { %>
         <tr>
-            <% for (var n = 0; n <lista.length; n++) { %>
+            
                 <td><%=lista[n].data%></td>
                 <td><%=lista[n].tipo%></td>
                 <td><%=lista[n].entrega%></td>
