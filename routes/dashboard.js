@@ -13,7 +13,9 @@ module.exports = (app)=>{
             var userexiste = await usuarios.finOne({_id:id})
             if(userexiste){
                 var lista = await atividades.find({_id:id})
-                res.render('dashboard.ejs',{login:userexiste})
+                if(lista){
+                     res.render('dashboard.ejs',{login:userexiste,lista})
+                }
             }else{
                 res.redirect("/login")
             }
