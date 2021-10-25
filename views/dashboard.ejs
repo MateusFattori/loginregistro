@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Dashboard - Atividades</h1>
-    <!-- <h2><%=login.nome%></h2> -->
+    <h2><%=login.nome%></h2> 
     <h3>Cadastrar Atividades</h3>
     <form action="" method="POST">
         <input type="hidden" name="id" value="<%=login._id%>">
@@ -36,9 +36,9 @@
                 <td><%=lista[n].tipo%></td>
                 <td><%=lista[n].entrega%></td>
                 <td><%=lista[n].disciplina%></td>
-                <td><%=lista[n].instrucoes%></td>   
+                <td><%=lista[n].instrucoes%></td>
+            <% } %>    
         </tr>
-        <% } %>
     </table>
 </body>
 </html>
