@@ -15,7 +15,6 @@ module.exports = (app)=>{
                 var lista = await atividades.find({user:id})
                 if(lista){
                      res.render('dashboard.ejs',{login:userexiste,lista})
-                    console.log(lista);
                 }
             }else{
                 res.redirect("/login")
