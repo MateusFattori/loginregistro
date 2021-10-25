@@ -18,9 +18,27 @@
             <option value="AT">AT</option>
         </select><br>
         <input type="text" name="entrega" id="entrega" placeholder="Ex: Tarafas no Teams, chat, Email, Froms, etc"><br>
-        <input type="text" name="disiciplina" id="disiciplina" placeholder="Ex: INW, BD2, LP2, HeG, BIO, etc"><br>
+        <input type="text" name="disciplina" id="disciplina" placeholder="Ex: INW, BD2, LP2, HeG, BIO, etc"><br>
         <textarea name="istrucoes" id="istrucoes" cols="30" rows="10" placeholder="Instruções"></textarea><br>
         <input type="submit" value="Salvar">
     </form>
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Entrega</th>
+            <th>Disciplina</th>
+            <th>Instruções</th>
+        </tr>
+        <tr>
+            <% for (var n = 0; n <lista.lenght; n++) { %>
+                <td><%=lista.data%></td>
+                <td><%=lista.data%></td>
+                <td><%=lista.disciplina%></td>
+                <td><%=lista.instrucoes%></td>
+                
+        </tr>
+        <% } %>
+    </table>
 </body>
 </html>

@@ -30,7 +30,7 @@ module.exports = (app)=>{
             data: dados.data,
             tipo: dados.tipo,
             entrega: dados.entrega,
-            disiclina: dados.disiclina,
+            disciplina: dados.disciplina,
             instrucoes: dados.instrucoes,
             user: dados.id
         }).save()
