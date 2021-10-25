@@ -10,7 +10,7 @@ module.exports = (app)=>{
         if(!id){
             res.redirect('/login')
         }else{
-            var userexiste = await usuarios.finOne({_id:id})
+            var userexiste = await usuarios.findOne({_id:id})
             if(userexiste){
                 var lista = await atividades.find({user:id})
                 if(lista){
@@ -36,6 +36,9 @@ module.exports = (app)=>{
         }).save()
         .then((result)=>{
             res.redirect('/dashboard?id='+dados.id)
+        })
+        .catch((err)=>{
+            console.log(err)
         })
     })
 }
