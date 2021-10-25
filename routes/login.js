@@ -1,4 +1,4 @@
-const { render } =require('ejs')
+//const { render } =require('ejs')
 
 module.exports = (app)=>{
     app.get('/login',(req,res)=>{
