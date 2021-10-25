@@ -37,8 +37,5 @@ module.exports = (app)=>{
         .then((result)=>{
             res.redirect('/dashboard?id='+dados.id)
         })
-        .catch((err)=>{
-            console.log(err)
-        })
     })
 }
