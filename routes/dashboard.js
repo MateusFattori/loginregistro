@@ -1,5 +1,6 @@
 module.exports = (app)=>{
-    var conexao = require("../config/database")
+
+    var conexao = require("../config/database")()
     var usuarios = require("../models/usuarios")
     var atividades = require("../models/atividades")
     
