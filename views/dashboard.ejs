@@ -32,11 +32,11 @@
         </tr>
         <tr>
             <% for (var n = 0; n <lista.lenght; n++) { %>
-                <td><%=lista.data%></td>
-                <td><%=lista.data%></td>
-                <td><%=lista.disciplina%></td>
-                <td><%=lista.instrucoes%></td>
-                
+                <td><%=lista[n].data%></td>
+                <td><%=lista[n].tipo%></td>
+                <td><%=lista[n].entrega%></td>
+                <td><%=lista[n].disciplina%></td>
+                <td><%=lista[n].instrucoes%></td>   
         </tr>
         <% } %>
     </table>
